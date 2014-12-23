@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
@@ -48,7 +49,7 @@ set fillchars+=vert:\
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinSize = 42
 
 
 " Custom Mappings "
@@ -65,4 +66,10 @@ nmap <leader>F :NERDTreeFind
 "nnoremap <esc> :noh<return><esc>
 
 hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
+
+" Default mapping
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-S-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
