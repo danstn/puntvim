@@ -31,6 +31,7 @@ set cursorline
 set warn
 set autoindent
 set smartcase
+set hlsearch
 
 set mouse=a
 set tabstop=2
@@ -60,4 +61,7 @@ vmap <C-c> :w !pbcopy<CR><CR>
 nmap <leader>f :NERDTreeToggle
 nmap <leader>F :NERDTreeFind
 
+"nnoremap <esc> :noh<return><esc>
+
+hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
 
