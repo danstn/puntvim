@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
@@ -37,6 +38,7 @@ set list " Show `listchars` characters
 set listchars=tab:=»,trail:·
 set laststatus=2
 set t_Co=256
+set fillchars+=vert:\ 
 
 " Custom settings "
 """""""""""""""""""
@@ -57,3 +59,5 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " NerdTree plugin
 nmap <leader>f :NERDTreeToggle
 nmap <leader>F :NERDTreeFind
+
+
