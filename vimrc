@@ -66,6 +66,7 @@ nmap <leader>F :NERDTreeFind
 "nnoremap <esc> :noh<return><esc>
 
 hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
+hi NonText ctermfg=238
 
 " Default mapping
 let g:multi_cursor_next_key='<C-n>'
