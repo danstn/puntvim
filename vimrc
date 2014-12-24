@@ -42,6 +42,8 @@ set listchars=tab:=»,trail:·
 set laststatus=2
 set t_Co=256
 set fillchars+=vert:\ 
+set cc=121
+set textwidth=120
 
 " Custom settings "
 """""""""""""""""""
@@ -65,8 +67,8 @@ nmap <leader>F :NERDTreeFind
 
 "nnoremap <esc> :noh<return><esc>
 
-hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
-hi NonText ctermfg=238
+hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=233
+hi NonText ctermfg=238 ctermbg=233
 
 " Default mapping
 let g:multi_cursor_next_key='<C-n>'
