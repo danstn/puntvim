@@ -57,6 +57,8 @@ let g:NERDTreeWinSize = 42
 " Custom Mappings "
 """""""""""""""""""
 
+map Y y$
+
 " Ctrl-c/x to copy/cut
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
