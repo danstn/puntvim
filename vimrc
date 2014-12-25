@@ -35,9 +35,10 @@ set autoindent
 set smartcase
 set hlsearch
 set showcmd
+set incsearch
 
 set mouse=a
-set tabstop=2
+set ts=2 sw=2
 set list " Show `listchars` characters
 set listchars=tab:=»,trail:·
 set laststatus=2
@@ -69,6 +70,8 @@ nmap <leader>f :NERDTreeToggle
 nmap <leader>F :NERDTreeFind
 
 "nnoremap <esc> :noh<return><esc>
+:noremap <Space>n :cnext<C-m>
+:noremap <Space>p :cprev<C-m>
 
 hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
 hi NonText ctermfg=238
