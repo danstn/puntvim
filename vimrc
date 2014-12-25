@@ -34,6 +34,7 @@ set warn
 set autoindent
 set smartcase
 set hlsearch
+set showcmd
 
 set mouse=a
 set tabstop=2
