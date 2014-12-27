@@ -1,4 +1,9 @@
 #!/bin/bash
+set -x
+
+# Attempt to remove current .vimrc and .vim
+[ -d ~/.vim ] && mv -i ~/.vim{,.bak}
+[ -f ~/.vimrc ] && mv -i ~/.vimrc{,.bak}
 
 # Get puntvim
 git clone https://github.com/dzotokan/puntvim.git ~/.vim
