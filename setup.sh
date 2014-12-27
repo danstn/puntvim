@@ -3,6 +3,7 @@ set -x
 
 # Attempt to remove current .vimrc and .vim
 [ -d ~/.vim ] && rm -ri ~/.vim
+[ -h ~/.vimrc ] && unlink -i ~/.vimrc
 [ -f ~/.vimrc ] && mv -i ~/.vimrc{,.bak}
 
 # Get puntvim
