@@ -46,6 +46,7 @@ set t_Co=256
 set fillchars+=vert:\ 
 set cc=121
 set textwidth=120
+set backspace=indent,eol,start
 
 " Custom settings "
 """""""""""""""""""
