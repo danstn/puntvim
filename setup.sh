@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -x
 
 # Attempt to remove current .vimrc and .vim
