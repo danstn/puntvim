@@ -19,6 +19,7 @@ Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
+filetype indent on          " load filetype-specific indent files
 
 
 " Standard settings "
@@ -26,16 +27,17 @@ filetype plugin indent on
 syntax on
 colorscheme railscasts
 
-set number
+set number      " show line numbers
 set ruler
 set expandtab
-set cursorline
+set cursorline  " highlight current line
 set warn
 set autoindent
 set smartcase
 set hlsearch
 set showcmd
 set incsearch
+set wildmenu    " visual autocomplete for command menu
 
 set mouse=a
 set ts=2 sw=2
