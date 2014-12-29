@@ -35,7 +35,7 @@ set warn
 set autoindent
 set smartcase
 set hlsearch
-set showcmd
+set showcmd    " show command in bottom bar
 set showmatch  " highlight matching [{()}]
 set incsearch
 set wildmenu   " visual autocomplete for command menu
