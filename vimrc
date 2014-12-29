@@ -27,17 +27,18 @@ filetype indent on          " load filetype-specific indent files
 syntax on
 colorscheme railscasts
 
-set number      " show line numbers
+set number     " show line numbers
 set ruler
 set expandtab
-set cursorline  " highlight current line
+set cursorline " highlight current line
 set warn
 set autoindent
 set smartcase
 set hlsearch
 set showcmd
+set showmatch  " highlight matching [{()}]
 set incsearch
-set wildmenu    " visual autocomplete for command menu
+set wildmenu   " visual autocomplete for command menu
 
 set mouse=a
 set ts=2 sw=2
@@ -85,3 +86,8 @@ let g:multi_cursor_prev_key='<C-S-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+" Tabularize mappings
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+endif
