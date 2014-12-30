@@ -41,7 +41,8 @@ set incsearch
 set wildmenu   " visual autocomplete for command menu
 
 set mouse=a
-set ts=2 sw=2
+set tabstop=2
+set shiftwidth=2
 set list " Show `listchars` characters
 set listchars=tab:=»,trail:·
 set laststatus=2
