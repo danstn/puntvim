@@ -33,9 +33,10 @@ set number     " show line numbers
 set ruler
 set expandtab
 set cursorline " highlight current line
-set warn
+set warn       " show current mode
 set autoindent
-set smartcase
+set ignorecase " case insensitive search
+set smartcase  " use case sensitive search if a capital letter is used
 set hlsearch
 set showcmd    " show command in bottom bar
 set showmatch  " highlight matching [{()}]
