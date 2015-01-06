@@ -92,3 +92,6 @@ if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
 endif
+
+" CtrlP wildignore
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
