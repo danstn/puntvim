@@ -77,6 +77,7 @@ nmap <leader>F :NERDTreeFind
 "nnoremap <esc> :noh<return><esc>
 :noremap <Space>n :cnext<C-m>
 :noremap <Space>p :cprev<C-m>
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
 hi NonText ctermfg=238
