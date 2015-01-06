@@ -6,7 +6,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'godlygeek/tabular'
+Plugin 'bogado/file-line'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
