@@ -26,7 +26,7 @@ let g:colors_name = "railscasts"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E1DC guibg=#2B2B2B ctermfg=white ctermbg=234
+hi Normal                    guifg=#E6E1DC guibg=#2B2B2B ctermfg=254 ctermbg=234
 hi Cursor                    guifg=#000000 guibg=#FFFFFF ctermfg=0 ctermbg=15	
 hi CursorLine                guibg=#333435 ctermbg=235 cterm=NONE
 hi Search                    guibg=#5A647E ctermfg=NONE ctermbg=236 cterm=underline
@@ -34,7 +34,7 @@ hi Visual                    guibg=#5A647E ctermbg=60
 hi LineNr                    guifg=#888888 ctermfg=242
 hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
 hi StatusLineNC              guibg=#414243 gui=NONE
-hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
+hi VertSplit                 guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
 hi CursorLineNr              guifg=#bbbbbb ctermfg=248
 hi ColorColumn               guibg=#333435 ctermbg=235
 
@@ -45,13 +45,13 @@ hi Folded                    guifg=#F6F3E8 guibg=#444444 gui=NONE
 
 " Invisible Characters
 " ------------------
-hi NonText                   guifg=#777777 gui=NONE
+hi NonText                   guifg=#777777 gui=NONE ctermfg=238
 hi SpecialKey                guifg=#777777 gui=NONE
 
 " Misc
 " ----
 " directory names and other special names in listings
-hi Directory                 guifg=#A5C261 gui=NONE
+hi Directory                 guifg=#A5C261 gui=NONE ctermfg=red
 
 " Popup Menu
 " ----------

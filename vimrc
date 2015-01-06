@@ -86,9 +86,6 @@ nmap <leader>F :NERDTreeFind
 :noremap <Space>p :cprev<C-m>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
-hi VertSplit guibg=#000000 gui=NONE guifg=#414243 ctermfg=235
-hi NonText ctermfg=238
-
 " Default mapping
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-S-p>'
