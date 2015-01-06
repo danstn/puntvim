@@ -69,6 +69,10 @@ let g:NERDTreeWinSize = 42
 
 map Y y$
 
+" Using registers to copy/paste to/from system clipboard
+map <leader>p "+p
+map <leader>y "+y
+
 " Ctrl-c/x to copy/cut
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
