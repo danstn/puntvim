@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -79,6 +80,9 @@ nmap <leader>F :NERDTreeFind
 :noremap <Space>p :cprev<C-m>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
+" Tag Bar
+nmap <F8> :TagbarToggle<CR>
+
 " Plugin Settings "
 """""""""""""""""""
 
@@ -103,7 +107,6 @@ if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
 endif
-
 
 let g:airline_theme='raven'
 let g:airline#extensions#tabline#enabled = 1
