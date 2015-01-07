@@ -55,13 +55,6 @@ set cc=121
 set textwidth=120
 set backspace=indent,eol,start
 
-" Custom settings "
-"""""""""""""""""""
-
-" Ctrl-P
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:NERDTreeWinSize = 42
 
 
 " Custom Mappings "
@@ -86,7 +79,20 @@ nmap <leader>F :NERDTreeFind
 :noremap <Space>p :cprev<C-m>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
-" Default mapping
+" Plugin Settings "
+"""""""""""""""""""
+
+" Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:NERDTreeWinSize = 42
+let g:ctrlp_match_window = 'bottom,order:ttb,min:3,max:10,results:50'
+
+" CtrlP wildignore
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
+
+" Multi cursor
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-S-p>'
 let g:multi_cursor_skip_key='<C-x>'
@@ -98,6 +104,10 @@ if exists(":Tabularize")
   vmap <Leader>a= :Tabularize /=<CR>
 endif
 
-" CtrlP wildignore
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
+
+let g:airline_theme='raven'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
