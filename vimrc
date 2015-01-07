@@ -75,6 +75,8 @@ vmap <C-c> :w !pbcopy<CR><CR>
 nmap <leader>f :NERDTreeToggle
 nmap <leader>F :NERDTreeFind
 
+inoremap <Nul> <C-n>
+
 "nnoremap <esc> :noh<return><esc>
 :noremap <Space>n :cnext<C-m>
 :noremap <Space>p :cprev<C-m>
