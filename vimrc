@@ -28,7 +28,7 @@ filetype indent on          " load filetype-specific indent files
 " Standard settings "
 """""""""""""""""""""
 syntax on
-colorscheme railscasts
+colorscheme solarized
 
 set number       " show line numbers
 set ruler
