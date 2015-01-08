@@ -88,10 +88,13 @@ nmap <F8> :TagbarToggle<CR>
 " Plugin Settings "
 """""""""""""""""""
 
+" NERDTree
+let g:NERDTreeWinSize = 42
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:NERDTreeWinSize = 42
 let g:ctrlp_match_window = 'bottom,order:ttb,min:3,max:10,results:50'
 
 " CtrlP wildignore
