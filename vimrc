@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
@@ -44,7 +45,6 @@ set showmatch    " highlight matching [{()}]
 set incsearch
 set nofoldenable
 set wildmenu   " visual autocomplete for command menu
-set paste
 
 set mouse=a
 set tabstop=2
@@ -58,6 +58,7 @@ set cc=121
 set textwidth=120
 set backspace=indent,eol,start
 set foldlevel=10
+set pastetoggle=<F2>
 
 " Custom Mappings "
 """""""""""""""""""
@@ -114,4 +115,9 @@ if exists(":Tabularize")
   vmap <Leader>a= :Tabularize /=<CR>
 endif
 
-let g:airline_theme='raven'
+let g:airline_theme='solarized'
+let g:gitgutter_sign_column_always = 1
+
+" Some highlights
+hi clear VertSplit
+hi clear SignColumn
