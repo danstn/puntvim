@@ -30,19 +30,20 @@ filetype indent on          " load filetype-specific indent files
 syntax on
 colorscheme railscasts
 
-set number     " show line numbers
+set number       " show line numbers
 set ruler
 set expandtab
-set cursorline " highlight current line
-set warn       " show current mode
+set cursorline   " highlight current line
+set warn         " show current mode
 set autoindent
-set ignorecase " case insensitive search
-set smartcase  " use case sensitive search if a capital letter is used
+set ignorecase   " case insensitive search
+set smartcase    " use case sensitive search if a capital letter is used
 set hlsearch
-set showcmd    " show command in bottom bar
-set showmatch  " highlight matching [{()}]
+set showcmd      " show command in bottom bar
+set showmatch    " highlight matching [{()}]
 set incsearch
-set wildmenu   " visual autocomplete for command menu
+set wildmenu     " visual autocomplete for command menu
+set nofoldenable
 
 set mouse=a
 set tabstop=2
@@ -55,8 +56,7 @@ set fillchars+=vert:\
 set cc=121
 set textwidth=120
 set backspace=indent,eol,start
-
-
+set foldlevel=10
 
 " Custom Mappings "
 """""""""""""""""""
