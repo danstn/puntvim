@@ -23,6 +23,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'junegunn/limelight.vim'
 
 " Auto completion engine
 Plugin 'Valloric/YouCompleteMe'
@@ -153,3 +154,6 @@ let g:airline_theme='solarized'
 """"""""""""""""""""""""""""""""""""""""
 let g:gitgutter_sign_column_always = 1
 
+" LimeLight
+""""""""""""""""""""""""""""""""""""""""
+let g:limelight_conceal_ctermfg = 0
