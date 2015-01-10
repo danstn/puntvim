@@ -83,10 +83,14 @@ inoremap <Nul> <C-n>
 " System's clipboard integration
 map <leader>p "+p
 map <leader>y "+y
+nmap <Leader>l :bnext<CR>
+nmap <Leader>h :bprevious<CR>
 
 "nnoremap <esc> :noh<return><esc>
 :noremap <Space>n :cnext<C-m>
 :noremap <Space>p :cprev<C-m>
+:noremap <Space>bn :bnext<CR>
+:noremap <Space>bp :bprevious<CR>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
 
@@ -148,6 +152,10 @@ endif
 " Airline
 """"""""""""""""""""""""""""""""""""""""
 let g:airline_theme='solarized'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " GitGutter
