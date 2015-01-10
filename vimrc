@@ -22,6 +22,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'maxbrunsfeld/vim-yankstack'
 
 " Auto completion engine
 Plugin 'Valloric/YouCompleteMe'
@@ -31,6 +32,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 call vundle#end()
+call yankstack#setup()
+
 filetype plugin indent on   " load filetype-specific indent files
 
 
