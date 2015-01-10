@@ -60,6 +60,7 @@ set showmatch    " highlight matching [{()}]
 set smartcase    " use case sensitive search if a capital letter is used
 set warn         " show current mode
 set wildmenu     " visual autocomplete for command menu
+set hidden
 
 set backspace=indent,eol,start
 set cc=81,121
