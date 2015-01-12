@@ -26,9 +26,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
-
 " Auto completion engine
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete.vim'
 " Snippets engine
 Plugin 'SirVer/ultisnips'
 " Snippets collection
@@ -165,6 +165,12 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 """"""""""""""""""""""""""""""""""""""""
 let g:gitgutter_sign_column_always = 1
 
+
 " LimeLight
 """"""""""""""""""""""""""""""""""""""""
 let g:limelight_conceal_ctermfg = 0
+
+
+" NeoComplete
+""""""""""""""""""""""""""""""""""""""""
+let g:neocomplete#enable_at_startup = 1
