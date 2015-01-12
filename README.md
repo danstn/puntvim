@@ -7,9 +7,11 @@ Vim configuration, packages and color schemes.
 
 ## Vim
 
-Note: Vim needs to be installed with lua if you want neocomplete plugin support.
+To support `neocomplete` and system's clipboard integration - make sure that vim is installed with certain flags. Run `vim --version` to check your build.
 
-    brew install vim --with-lua
+### Mac OS
+
+    brew install vim --with-lua --with-clipboard
 
 ## .vimrc and plugins
   
