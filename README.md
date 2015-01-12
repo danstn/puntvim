@@ -13,6 +13,19 @@ To support `neocomplete` and system's clipboard integration - make sure that vim
 
     brew install vim --with-lua --with-clipboard
 
-## .vimrc and plugins
+## Configuration and Plugins
+
+### Automatic
+
+Run this script to pull this repo and install vim plugins automatically. 
+
+Note: this will replace and backup your `.vimrc` and will attempt to destroy `.vim` directory. Eventially the repository will be pulled into `.vim`.
   
     curl https://raw.githubusercontent.com/dzotokan/puntvim/master/setup.sh | sh
+    
+### Manual
+
+- Install Vundle
+- Place the contents of `vimrc` into `~/.vimrc` (you might want to back up your current one)
+- Pull `colors` into `~/.vim/colors`
+- Run `vim +PluginInstall +qall` to install plugins
