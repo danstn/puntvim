@@ -26,19 +26,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
-" Auto completion engine
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Shougo/neocomplete.vim'
-" Snippets engine
 Plugin 'SirVer/ultisnips'
-" Snippets collection
 Plugin 'honza/vim-snippets'
 
 call vundle#end()
 call yankstack#setup()
 
 filetype plugin indent on   " load filetype-specific indent files
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,19 +142,18 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 
 " Tabularize
 """"""""""""""""""""""""""""""""""""""""
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-endif
+nmap <Leader>== :Tabularize /=<CR>
+vmap <Leader>== :Tabularize /=<CR>
 
 
 " Airline
 """"""""""""""""""""""""""""""""""""""""
-let g:airline_theme='solarized'
+let g:airline_theme = 'solarized'
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
 
 
 " GitGutter
@@ -174,3 +169,11 @@ let g:limelight_conceal_ctermfg = 0
 " NeoComplete
 """"""""""""""""""""""""""""""""""""""""
 let g:neocomplete#enable_at_startup = 1
+
+
+" RSpec.vim mappings
+""""""""""""""""""""""""""""""""""""""""
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
