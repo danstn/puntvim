@@ -1,14 +1,9 @@
-FROM base
+FROM ubuntu
 
 MAINTAINER Daniel Stankevich
 
-# Install required packages
-RUN apt-get install vim git curl -y
+RUN apt-get install -y vim curl git python
 
-# Setup vim. See github page for more info
-RUN curl https://raw.githubusercontent.com/dzotokan/puntvim/master/setup.sh | sh
+ENV LANG en_US.UTF-8
 
-CMD vim
-
-
-
+ENTRYPOINT ["vim"]
