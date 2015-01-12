@@ -173,6 +173,11 @@ let g:limelight_conceal_ctermfg = 0
 "let g:neocomplete#sources#syntax#min_keyword_length = 5
 
 
+" YCM
+""""""""""""""""""""""""""""""""""""""""
+let g:ycm_min_num_of_chars_for_completion = 2
+
+
 " RSpec.vim mappings
 """"""""""""""""""""""""""""""""""""""""
 map <Leader>t :call RunCurrentSpecFile()<CR>
