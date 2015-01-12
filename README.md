@@ -25,7 +25,7 @@ Note: this will replace and backup your `.vimrc` and will attempt to destroy `.v
     
 ### Manual
 
-- Install Vundle
+- Install Vundle: `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 - Place the contents of `vimrc` into `~/.vimrc` (you might want to back up your current one)
-- Pull `colors` into `~/.vim/colors`
+- Pull `colors` and `syntax` into `~/.vim/` for themes and syntax improvements
 - Run `vim +PluginInstall +qall` to install plugins
