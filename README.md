@@ -29,3 +29,19 @@ Note: this will replace and backup your `.vimrc` and will attempt to destroy `.v
 - Place the contents of `vimrc` into `~/.vimrc` (you might want to back up your current one)
 - Pull `colors` and `syntax` into `~/.vim/` for themes and syntax improvements
 - Run `vim +PluginInstall +qall` to install plugins
+
+## Vim in Docker
+
+### OS X
+
+Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your shell rc file.
+
+## Running the container
+
+Note: this is work in progress and far from being robust yet.
+
+To run Vim off the docker container use `vim-container.sh`. Could be aliased to `vim` or `vimc` (Vim in container).
+
+    ./vim-container.sh
+    
+It will mount $HOME and change the working directory to the current one. `--rm` is put to shut down the container when Vim quits, so you don't have to stop the container. See `Dockerfile` for details & progress.
