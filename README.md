@@ -59,6 +59,6 @@ To run Vim off the docker container use `vim-container.sh`. Could be aliased to 
 
 ..or using a basic configuration (recommended):
 
-    /.vim-container.sh -u ~/.vim/vimr-basic
+    /.vim-container.sh -u ~/.vim/vimrc-basic
     
 It will mount $HOME and change the working directory to the current one. `--rm` is put to shut down the container when Vim quits, so you don't have to stop the container. See `Dockerfile` for details & progress.
