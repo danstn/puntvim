@@ -73,6 +73,11 @@ set t_Co=256
 set tabstop=2
 set textwidth=120
 
+" Jump to the previous location when opening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 
 " MAPPINGS
 """"""""""""""""""""""""""""""""""""""""
