@@ -60,6 +60,7 @@ set warn         " show current mode
 set wildmenu     " visual autocomplete for command menu
 set hidden
 
+set bg=dark
 set backspace=indent,eol,start
 set cc=81,121
 set fillchars+=vert:\ 
