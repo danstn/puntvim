@@ -32,7 +32,8 @@ Note: this will replace and backup your `.vimrc` and will attempt to destroy `.v
 
 ## Vim in Docker
 
-_Using basic vim configuration (`vimrc-basic`) is recommended if you want to run Vim in Docker._
+_Using basic vim configuration (`vimrc-basic`) is recommended if you want to run Vim in Docker. Use `vim -u` to specify
+a custom configuration file for vim_
 
 ### OS X
 
@@ -55,5 +56,9 @@ Note: this is work in progress and far from being robust yet.
 To run Vim off the docker container use `vim-container.sh`. Could be aliased to `vim` or `vimc` (Vim in container).
 
     ./vim-container.sh
+
+..or using a basic configuration (recommended):
+
+    /.vim-container.sh -u ~/.vim/vimr-basic
     
 It will mount $HOME and change the working directory to the current one. `--rm` is put to shut down the container when Vim quits, so you don't have to stop the container. See `Dockerfile` for details & progress.
