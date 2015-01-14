@@ -15,7 +15,7 @@ RUN useradd vimmer && \
     locale-gen en_US.UTF-8 && \
     /usr/sbin/update-locale LANG=en_US.UTF-8
 
-WORKDIR /home/vimmer
+WORKDIR /home/vimmer/mnt
 
 ENV HOME /home/vimmer
 ENV LANG en_US.UTF-8
@@ -28,14 +28,11 @@ USER vimmer
 RUN mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle
 RUN wget -P $HOME/.vim/autoload https://tpo.pe/pathogen.vim
 
-# Install Plugins
-RUN git clone https://github.com/scrooloose/nerdtree.git $HOME/.vim/bundle/nerdtree
-
-# Copy vimrc inside the container
+# Deploy vim artifact
 COPY ./vim-artifact/vimrc-docker $HOME/.vimrc
 COPY ./vim-artifact/colors $HOME/.vim/colors
 COPY ./vim-artifact/fonts $HOME/.vim/fonts
 COPY ./vim-artifact/syntax $HOME/.vim/syntax
-COPY ./vim-artifact/bundle/* $HOME/.vim/bundle/
+COPY ./vim-artifact/bundle $HOME/.vim/bundle
 
 ENTRYPOINT ["vim"]

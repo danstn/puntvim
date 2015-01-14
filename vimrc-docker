@@ -41,6 +41,7 @@ set shiftwidth=2
 set t_Co=256
 set tabstop=2
 set textwidth=120
+set bg=dark
 
 " Jump to the previous location when opening a file
 if has("autocmd")
@@ -111,7 +112,7 @@ let g:multi_cursor_quit_key = '<Esc>'
 
 " UltiSnip
 """"""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger = "<c-j>"
+"let g:UltiSnipsExpandTrigger = "<c-j>"
 
 
 " Tabularize
@@ -127,7 +128,7 @@ let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 
 " GitGutter
@@ -154,7 +155,7 @@ let g:limelight_conceal_ctermfg = 0
 
 " RSpec.vim mappings
 """"""""""""""""""""""""""""""""""""""""
-"map <Leader>t :call RunCurrentSpecFile()<CR>
-"map <Leader>s :call RunNearestSpec()<CR>
-"map <Leader>l :call RunLastSpec()<CR>
-"map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
