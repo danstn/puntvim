@@ -1,5 +1,4 @@
-Punt Vim
-========
+Punt Vim ========
 
 Vim configuration, packages and color schemes.
 
@@ -7,7 +6,8 @@ Vim configuration, packages and color schemes.
 
 ## Vim
 
-To support `neocomplete` and system's clipboard integration - make sure that vim is installed with certain flags. Run `vim --version` to check your build.
+To support `neocomplete` and system's clipboard integration - make sure that vim is installed with certain flags. Run
+`vim --version` to check your build.
 
 ### OS X
 
@@ -19,7 +19,8 @@ To support `neocomplete` and system's clipboard integration - make sure that vim
 
 Run this script to pull this repo and install vim plugins automatically. 
 
-Note: this will replace and backup your `.vimrc` and will attempt to destroy `.vim` directory. Eventially the repository will be pulled into `.vim`.
+Note: this will replace and backup your `.vimrc` and will attempt to destroy `.vim` directory. Eventially the repository
+will be pulled into `.vim`.
   
     curl https://raw.githubusercontent.com/dzotokan/puntvim/master/setup.sh | sh
     
@@ -37,28 +38,27 @@ a custom configuration file for vim_
 
 ### OS X
 
-Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your shell rc file. Run `boot2docker up` to start a VM for Docker (each per shell session).
+Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your
+shell rc file. Run `boot2docker up` to start a VM for Docker (each per shell session).
 
 ## Getting the container
 
 You can pull from Docker Hub
 
     docker pull dzotokan/vim
-    
+
 ..or build locally
 
-    docker build -t <container_name> .
+    ./docker/build.sh
 
 ## Running the container
 
 Note: this is work in progress and far from being robust yet.
 
-To run Vim off the docker container use `vim-container.sh`. Could be aliased to `vim` or `vimc` (Vim in container).
+To run Vim off the docker container use `run-container.sh`. Could be aliased to `vim` or `vimc` (Vim in container; i.e.
+`alias vimc="~/.vim/docker/run-container.sh"`).
 
-    ./vim-container.sh
+    ./docker/run-container.sh
 
-..or using a basic configuration (recommended):
-
-    ./vim-container.sh -u ~/.vim/vimrc-basic
-    
-It will mount $HOME and change the working directory to the current one. `--rm` is put to shut down the container when Vim quits, so you don't have to stop the container. See `Dockerfile` for details & progress.
+It will mount $HOME and change the working directory to the current one. `--rm` is put to shut down the container when
+Vim quits, so you don't have to stop the container. See `Dockerfile` for details.
