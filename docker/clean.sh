@@ -1,2 +1,2 @@
 #!/bin/bash
-rm vimrc-docker
+rm -rf vim-artifact

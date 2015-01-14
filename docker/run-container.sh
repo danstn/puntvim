@@ -2,9 +2,6 @@
 
 docker run \
   --interactive --tty --rm \
-  --user $(id -u) \
-  --env "HOME=$HOME" \
-  --volume "$HOME:$HOME" -v "$PWD:$PWD" \
-  --workdir "$PWD" \
+  --volume "$HOME:/home/vimmer/mnt" \
   dzotokan/vim $@
 
