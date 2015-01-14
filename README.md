@@ -32,6 +32,8 @@ Note: this will replace and backup your `.vimrc` and will attempt to destroy `.v
 
 ## Vim in Docker
 
+_Using basic vim configuration (`vimrc-basic`) is recommended if you want to run Vim in Docker._
+
 ### OS X
 
 Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your shell rc file.
