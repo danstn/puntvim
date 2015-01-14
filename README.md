@@ -36,6 +36,16 @@ Note: this will replace and backup your `.vimrc` and will attempt to destroy `.v
 
 Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your shell rc file.
 
+## Getting the container
+
+You can pull from Docker Hub
+
+    docker pull dzotokan/vim
+    
+..or build locally
+
+    docker build -t <container_name> .
+
 ## Running the container
 
 Note: this is work in progress and far from being robust yet.
