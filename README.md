@@ -37,7 +37,7 @@ a custom configuration file for vim_
 
 ### OS X
 
-Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your shell rc file.
+Make sure you have `boot2docker` to be able to run this container. For auto loading export docker env variables in your shell rc file. Run `boot2docker up` to start a VM for Docker (each per shell session).
 
 ## Getting the container
 
