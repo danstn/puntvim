@@ -1,4 +1,5 @@
-Punt Vim ========
+Punt Vim 
+========
 
 Vim configuration, packages and color schemes.
 
