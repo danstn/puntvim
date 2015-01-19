@@ -63,3 +63,8 @@ To run Vim off the docker container use `run-container.sh`. Could be aliased to 
 
 It will mount $HOME and change the working directory to the current one. `--rm` is put to shut down the container when
 Vim quits, so you don't have to stop the container. See `Dockerfile` for details.
+
+## Issues
+
+- Having YCM plugin enabled causes a `sigterm` in `.rb` files after entering `::` or `..` while in Insert mode using Vim
+  v7.4. Does not happen in MacVim (`mvim -v`) 
