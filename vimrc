@@ -190,3 +190,9 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+
+" Yankstack mappings
+""""""""""""""""""""""""""""""""""""""""
+nmap <leader>o <Plug>yankstack_substitute_older_paste
+nmap <leader>i <Plug>yankstack_substitute_newer_paste
