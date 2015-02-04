@@ -143,13 +143,15 @@ let g:multi_cursor_quit_key = '<Esc>'
 
 " UltiSnip
 """"""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsExpandTrigger = "<C-j>"
 
 
 " Tabularize
 """"""""""""""""""""""""""""""""""""""""
-nmap <Leader>== :Tabularize /=<CR>
-vmap <Leader>== :Tabularize /=<CR>
+vmap <leader><tab>p :Tabularize /\|<CR>
+vmap <leader><tab>= :Tabularize /=<CR>
+vmap <leader><tab>: :Tabularize /:<CR>
+vmap <leader><tab><tab> :Tabularize /
 
 
 " Airline
