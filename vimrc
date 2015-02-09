@@ -91,7 +91,7 @@ map <leader>y "+y
 nmap <Leader>l :bnext<CR>
 nmap <Leader>h :bprevious<CR>
 
-"nnoremap <esc> :noh<return><esc>
+:nnoremap * *``
 :noremap <Space>n :cnext<C-m>
 :noremap <Space>p :cprev<C-m>
 :noremap <Space>bn :bnext<CR>
