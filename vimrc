@@ -73,6 +73,7 @@ set shiftwidth=2
 set t_Co=256
 set tabstop=2
 set textwidth=120
+set scrolloff=5
 
 " Jump to the previous location when opening a file
 if has("autocmd")
