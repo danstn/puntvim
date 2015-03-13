@@ -108,6 +108,9 @@ nmap <silent> ,/ :nohlsearch<CR>
 :noremap <Space>bp :bprevious<CR>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
+" Save as sudo
+cmap w!! w !sudo tee % >/dev/null
+
 
 " HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""
