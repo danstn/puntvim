@@ -104,7 +104,8 @@ nmap <Leader>h :bprevious<CR>
 """"""""""""""""""""""""""""""""""""""""
 hi clear VertSplit
 hi clear SignColumn
-
+hi NonText ctermfg=black
+hi VertSplit ctermfg=black
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
