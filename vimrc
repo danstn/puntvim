@@ -92,6 +92,15 @@ map <leader>y "+y
 nmap <Leader>l :bnext<CR>
 nmap <Leader>h :bprevious<CR>
 
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Clear highlighed search
+nmap <silent> ,/ :nohlsearch<CR>
+
 :nnoremap * *``
 :noremap <Space>n :cnext<C-m>
 :noremap <Space>p :cprev<C-m>
