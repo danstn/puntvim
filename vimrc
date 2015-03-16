@@ -77,6 +77,12 @@ set tabstop=2
 set textwidth=120
 set scrolloff=5
 
+" Make vim remember undos, even when the file is closed!
+set undofile                    " Save undo's after file closes
+set undodir=~/.vim/undo         " where to save undo histories
+set undolevels=1000             " How many undos
+set undoreload=10000            " number of lines to save for undo
+
 " Jump to the previous location when opening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
