@@ -60,6 +60,7 @@ set smartcase    " use case sensitive search if a capital letter is used
 set warn         " show current mode
 set wildmenu     " visual autocomplete for command menu
 set hidden
+set exrc         " support local vimrc
 
 set bg=dark
 set backspace=indent,eol,start
