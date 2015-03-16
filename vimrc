@@ -61,6 +61,7 @@ set warn         " show current mode
 set wildmenu     " visual autocomplete for command menu
 set hidden
 set exrc         " support local vimrc
+set secure
 
 set bg=dark
 set backspace=indent,eol,start
