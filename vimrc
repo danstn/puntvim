@@ -78,6 +78,11 @@ set tabstop=2
 set textwidth=120
 set scrolloff=5
 
+" Improve vim's scrolling speed
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+
 " Make vim remember undos, even when the file is closed!
 set undofile                    " Save undo's after file closes
 set undodir=~/.vim/undo         " where to save undo histories
