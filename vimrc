@@ -30,6 +30,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 call yankstack#setup()
