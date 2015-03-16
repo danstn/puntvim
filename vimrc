@@ -126,8 +126,6 @@ cmap w!! w !sudo tee % >/dev/null
 hi clear VertSplit
 hi clear SignColumn
 hi NonText ctermfg=black
-hi VertSplit ctermfg=black
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              PLUGIN SETTINGS                                 "
