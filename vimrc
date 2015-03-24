@@ -116,8 +116,11 @@ cmap w!! w !sudo tee % >/dev/null
 " HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""
 "hi clear VertSplit
-"hi clear SignColumn
-"hi NonText ctermfg=black
+hi clear SignColumn
+hi NonText ctermfg=233
+hi LineNr ctermfg=235 ctermbg=black
+hi Comment ctermbg=none ctermfg=235
+hi CursorLine ctermbg=233
 "hi VertSplit ctermfg=black
 
 
