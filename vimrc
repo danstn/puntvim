@@ -30,6 +30,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 call yankstack#setup()
@@ -40,8 +41,10 @@ filetype plugin indent on   " load filetype-specific indent files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            STANDARD VIM SETTIGNS                             "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set t_Co=256
 syntax on
-colorscheme solarized
+set bg=dark
+colorscheme distinguished
 
 set autoindent   " enable automatic indentation
 set cursorline   " highlight current line
@@ -60,7 +63,6 @@ set warn         " show current mode
 set wildmenu     " visual autocomplete for command menu
 set hidden
 
-set bg=dark
 set backspace=indent,eol,start
 set cc=81,121
 set fillchars+=vert:\ 
@@ -70,7 +72,6 @@ set listchars=tab:=»,trail:·
 set mouse=a
 set pastetoggle=<F2>
 set shiftwidth=2
-set t_Co=256
 set tabstop=2
 set textwidth=120
 set scrolloff=5
@@ -114,10 +115,10 @@ cmap w!! w !sudo tee % >/dev/null
 
 " HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""
-hi clear VertSplit
-hi clear SignColumn
-hi NonText ctermfg=black
-hi VertSplit ctermfg=black
+"hi clear VertSplit
+"hi clear SignColumn
+"hi NonText ctermfg=black
+"hi VertSplit ctermfg=black
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,7 +135,7 @@ nmap <F8> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""""""""""""
 nmap <leader>f :NERDTreeToggle
 nmap <leader>F :NERDTreeFind
-let g:NERDTreeWinSize = 42
+let g:NERDTreeWinSize = 32
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
@@ -170,7 +171,7 @@ vmap <leader><tab><tab> :Tabularize /
 
 " Airline
 """"""""""""""""""""""""""""""""""""""""
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'dark'
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
@@ -180,7 +181,7 @@ let g:airline_powerline_fonts = 1
 
 " GitGutter
 """"""""""""""""""""""""""""""""""""""""
-let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_column_always = 0
 
 
 " LimeLight
