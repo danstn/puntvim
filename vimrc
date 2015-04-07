@@ -132,9 +132,6 @@ hi clear VertSplit
 hi clear SignColumn
 hi VertSplit ctermfg=black
 hi NonText ctermfg=233
-hi LineNr ctermfg=235 ctermbg=black
-hi Comment ctermbg=none ctermfg=244
-hi CursorLine ctermbg=233
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              PLUGIN SETTINGS                                 "
