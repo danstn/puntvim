@@ -75,7 +75,7 @@ set pastetoggle=<F2>
 set shiftwidth=2
 set t_Co=256
 set tabstop=2
-set textwidth=120
+set textwidth=81
 set scrolloff=5
 
 " Improve vim's scrolling speed
@@ -130,7 +130,11 @@ cmap w!! w !sudo tee % >/dev/null
 """"""""""""""""""""""""""""""""""""""""
 hi clear VertSplit
 hi clear SignColumn
-hi NonText ctermfg=black
+hi VertSplit ctermfg=black
+hi NonText ctermfg=233
+hi LineNr ctermfg=235 ctermbg=black
+hi Comment ctermbg=none ctermfg=244
+hi CursorLine ctermbg=233
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              PLUGIN SETTINGS                                 "
@@ -210,6 +214,7 @@ let g:limelight_conceal_ctermfg = 0
 " YCM
 """"""""""""""""""""""""""""""""""""""""
 let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 
 " RSpec.vim mappings
