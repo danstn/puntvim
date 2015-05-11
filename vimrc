@@ -31,6 +31,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'justinmk/vim-syntax-extra'
+
 
 call vundle#end()
 call yankstack#setup()
@@ -88,6 +90,7 @@ set undofile                    " Save undo's after file closes
 set undodir=~/.vim/undo         " where to save undo histories
 set undolevels=1000             " How many undos
 set undoreload=10000            " number of lines to save for undo
+set tags=tags;/
 
 " Jump to the previous location when opening a file
 if has("autocmd")
@@ -156,8 +159,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:ctrlp_map           = '<c-p>'
 let g:ctrlp_cmd           = 'CtrlP'
 let g:ctrlp_match_window  = 'bottom,order:ttb,min:3,max:10,results:50'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore .= '\v[\/](node_modules)$'
+"let g:ctrlp_custom_ignore .= '\v\.(class|cache|stats)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(class|cache|stats)$'
+  \ }
 
 
 " Multi cursor
