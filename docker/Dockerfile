@@ -5,7 +5,14 @@ MAINTAINER Daniel Stankevich
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install vim, curl, git etc
-RUN apt-get install -y vim curl wget git python
+
+
+RUN apt-get install -y curl wget git python
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository -y ppa:neovim-ppa/unstable && \
+    apt-get update && \
+    apt-get install -y neovim
 
 # Setup a vim user and locales
 RUN useradd vimmer && \
@@ -25,14 +32,14 @@ RUN chown -R vimmer:vimmer $HOME
 USER vimmer
 
 # Setup Pathogen
-RUN mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle
-RUN wget -P $HOME/.vim/autoload https://tpo.pe/pathogen.vim
+RUN mkdir -p $HOME/.nvim/autoload $HOME/.nvim/bundle
+RUN wget -P $HOME/.nvim/autoload https://tpo.pe/pathogen.vim
 
 # Deploy vim artifact
-COPY ./vim-artifact/vimrc-docker $HOME/.vimrc
-COPY ./vim-artifact/colors $HOME/.vim/colors
-COPY ./vim-artifact/fonts $HOME/.vim/fonts
-COPY ./vim-artifact/syntax $HOME/.vim/syntax
-COPY ./vim-artifact/bundle $HOME/.vim/bundle
+COPY ./vim-artifact/vimrc-docker $HOME/.nvimrc
+COPY ./vim-artifact/colors $HOME/.nvim/colors
+COPY ./vim-artifact/fonts $HOME/.nvim/fonts
+COPY ./vim-artifact/syntax $HOME/.nvim/syntax
+COPY ./vim-artifact/bundle $HOME/.nvim/bundle
 
-ENTRYPOINT ["vim"]
+ENTRYPOINT ["nvim"]
