@@ -42,8 +42,8 @@ filetype plugin indent on   " load filetype-specific indent files
 "                            STANDARD VIM SETTIGNS                             "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
-syntax on
 set bg=dark
+syntax on
 colorscheme distinguished
 
 set autoindent   " enable automatic indentation
@@ -119,7 +119,7 @@ cmap w!! w !sudo tee % >/dev/null
 hi clear SignColumn
 hi NonText ctermfg=233
 hi LineNr ctermfg=235 ctermbg=black
-hi Comment ctermbg=none ctermfg=235
+hi Comment ctermbg=none ctermfg=242
 hi CursorLine ctermbg=233
 "hi VertSplit ctermfg=black
 
@@ -179,7 +179,7 @@ let g:airline_theme = 'dark'
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 
 " GitGutter
