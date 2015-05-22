@@ -32,7 +32,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'justinmk/vim-syntax-extra'
-
+Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 call yankstack#setup()
@@ -43,8 +43,10 @@ filetype plugin indent on   " load filetype-specific indent files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            STANDARD VIM SETTIGNS                             "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set t_Co=256
+set bg=dark
 syntax on
-colorscheme solarized
+colorscheme distinguished
 
 set autoindent   " enable automatic indentation
 set cursorline   " highlight current line
@@ -65,7 +67,6 @@ set hidden
 set exrc         " support local vimrc
 set secure
 
-set bg=dark
 set backspace=indent,eol,start
 set cc=81,121
 set fillchars+=vert:\ 
@@ -75,7 +76,6 @@ set listchars=tab:=»,trail:·
 set mouse=a
 set pastetoggle=<F2>
 set shiftwidth=2
-set t_Co=256
 set tabstop=2
 set textwidth=81
 set scrolloff=5
@@ -131,10 +131,12 @@ cmap w!! w !sudo tee % >/dev/null
 
 " HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""
-hi clear VertSplit
 hi clear SignColumn
 hi VertSplit ctermfg=black
 hi NonText ctermfg=233
+hi LineNr ctermfg=235 ctermbg=black
+hi Comment ctermbg=none ctermfg=242
+hi CursorLine ctermbg=233
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              PLUGIN SETTINGS                                 "
@@ -150,7 +152,7 @@ nmap <F8> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""""""""""""
 nmap <leader>f :NERDTreeToggle
 nmap <leader>F :NERDTreeFind
-let g:NERDTreeWinSize = 42
+let g:NERDTreeWinSize = 32
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
@@ -191,7 +193,7 @@ vmap <leader><tab><tab> :Tabularize /
 
 " Airline
 """"""""""""""""""""""""""""""""""""""""
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'dark'
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
@@ -201,7 +203,7 @@ let g:airline_powerline_fonts = 1
 
 " GitGutter
 """"""""""""""""""""""""""""""""""""""""
-let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_column_always = 0
 
 
 " LimeLight
