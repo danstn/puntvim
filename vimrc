@@ -236,3 +236,5 @@ map <Leader>a :call RunAllSpecs()<CR>
 """"""""""""""""""""""""""""""""""""""""
 nmap <leader>o <Plug>yankstack_substitute_older_paste
 nmap <leader>i <Plug>yankstack_substitute_newer_paste
+
+
