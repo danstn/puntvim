@@ -211,13 +211,6 @@ let g:gitgutter_sign_column_always = 0
 let g:limelight_conceal_ctermfg = 0
 
 
-" NeoComplete
-""""""""""""""""""""""""""""""""""""""""
-"let g:neocomplete#enable_at_startup = 1
-"let g:neocomplete#enable_smart_case = 1
-"let g:neocomplete#sources#syntax#min_keyword_length = 5
-
-
 " YCM
 """"""""""""""""""""""""""""""""""""""""
 let g:ycm_min_num_of_chars_for_completion = 2
