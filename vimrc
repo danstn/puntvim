@@ -165,7 +165,7 @@ let g:ctrlp_match_window  = 'bottom,order:ttb,min:3,max:10,results:50'
 "let g:ctrlp_custom_ignore .= '\v[\/](node_modules)$'
 "let g:ctrlp_custom_ignore .= '\v\.(class|cache|stats)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '\.(git|hg|svn)$\|\.yardoc\|node_modules\|log\|tmp$',
   \ 'file': '\v\.(class|cache|stats)$'
   \ }
 
