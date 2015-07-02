@@ -124,6 +124,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 :noremap <Space>bn :bnext<CR>
 :noremap <Space>bp :bprevious<CR>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
+:nnoremap <F3> :set wrap!<CR>
 
 " Save as sudo
 cmap w!! w !sudo tee % >/dev/null
