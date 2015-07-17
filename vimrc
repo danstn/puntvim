@@ -33,6 +33,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/yajs.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'geekjuice/vim-mocha'
 
 call vundle#end()
 call yankstack#setup()
@@ -216,6 +219,10 @@ let g:limelight_conceal_ctermfg = 0
 """"""""""""""""""""""""""""""""""""""""
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+" Mocha
+""""""""""""""""""""""""""""""""""""""""
+let g:mocha_js_command = "!mocha --recursive --compilers js:babel/register test"
 
 
 " RSpec.vim mappings
