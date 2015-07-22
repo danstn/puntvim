@@ -38,6 +38,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'geekjuice/vim-mocha'
 Plugin 'bitc/vim-hdevtools'
 "Plugin 'eagletmt/ghcmod-vim'
+"Plugin 'eagletmt/neco-ghc'
 Plugin 'raichoo/haskell-vim'
 
 call vundle#end()
@@ -202,7 +203,7 @@ vmap <leader><tab><tab> :Tabularize /
 
 " Airline
 """"""""""""""""""""""""""""""""""""""""
-let g:airline_theme = 'dark'
+let g:airline_theme = 'wombat' " dark
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
@@ -224,6 +225,7 @@ let g:limelight_conceal_ctermfg = 0
 """"""""""""""""""""""""""""""""""""""""
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " Mocha
 """"""""""""""""""""""""""""""""""""""""
@@ -245,6 +247,7 @@ nmap <leader>i <Plug>yankstack_substitute_newer_paste
 
 " Syntastic
 """"""""""""""""""""""""""""""""""""""""
+nmap <F1> :SyntasticToggleMode<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -256,6 +259,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_loc_list_height = 5
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
+
+hi SyntasticErrorSign ctermbg=none ctermfg=red
+hi SyntasticWarningSign ctermbg=none ctermfg=yellow
 
