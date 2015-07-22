@@ -36,12 +36,14 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'geekjuice/vim-mocha'
+Plugin 'bitc/vim-hdevtools'
+"Plugin 'eagletmt/ghcmod-vim'
+Plugin 'raichoo/haskell-vim'
 
 call vundle#end()
 call yankstack#setup()
 
 filetype plugin indent on   " load filetype-specific indent files
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            STANDARD VIM SETTIGNS                             "
@@ -82,6 +84,7 @@ set shiftwidth=2
 set tabstop=2
 set textwidth=81
 set scrolloff=5
+set autoread
 
 " Improve vim's scrolling speed
 set ttyfast
@@ -145,6 +148,8 @@ hi CursorLine ctermbg=233
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              PLUGIN SETTINGS                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 
 
 " Tag Bar
@@ -238,4 +243,19 @@ map <Leader>a :call RunAllSpecs()<CR>
 nmap <leader>o <Plug>yankstack_substitute_older_paste
 nmap <leader>i <Plug>yankstack_substitute_newer_paste
 
+" Syntastic
+""""""""""""""""""""""""""""""""""""""""
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 
