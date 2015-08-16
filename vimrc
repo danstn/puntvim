@@ -75,7 +75,7 @@ set secure
 
 set backspace=indent,eol,start
 set cc=81,121
-set fillchars+=vert:\
+set fillchars+=vert:\ 
 set foldlevel=10
 set laststatus=2
 set listchars=tab:=»,trail:·
