@@ -75,7 +75,7 @@ set secure
 
 set backspace=indent,eol,start
 set cc=81,121
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 set foldlevel=10
 set laststatus=2
 set listchars=tab:=»,trail:·
@@ -103,6 +103,16 @@ set tags=tags;/
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Strip whitespace on write
+fun! StripTrailingWhitespace()
+  if &ft =~ 'vim\|vimrc'
+    return
+  endif
+  %s/\s\+$//e
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
+nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 
 " MAPPINGS
@@ -175,7 +185,7 @@ let g:ctrlp_match_window  = 'bottom,order:ttb,min:3,max:10,results:50'
 "let g:ctrlp_custom_ignore .= '\v[\/](node_modules)$'
 "let g:ctrlp_custom_ignore .= '\v\.(class|cache|stats)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.(git|hg|svn)$\|\.yardoc\|node_modules\|log\|tmp$',
+  \ 'dir':  '\.(git|hg|svn)$\|\.yardoc\|node_modules\|log\|tmp\|target\|dist$',
   \ 'file': '\v\.(class|cache|stats)$'
   \ }
 
@@ -257,7 +267,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
+"let g:syntastic_aggregate_errors = 1
 let g:syntastic_loc_list_height = 5
 
 hi SyntasticErrorSign ctermbg=none ctermfg=red
