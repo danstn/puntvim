@@ -88,6 +88,7 @@ set wildmenu     " visual autocomplete for command menu
 set hidden
 set exrc         " support local vimrc
 set secure
+set nowrap
 
 set backspace=indent,eol,start
 set cc=81,121
