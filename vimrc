@@ -6,7 +6,6 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'bogado/file-line'
 Plugin 'gmarik/Vundle.vim'
@@ -15,31 +14,46 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'justinmk/vim-syntax-extra'
-Plugin 'jelera/vim-javascript-syntax'
+
+" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" Haskell
+"Plugin 'eagletmt/neco-ghc'
+Plugin 'bitc/vim-hdevtools'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'neovimhaskell/nvim-hs'
+Plugin 'neovimhaskell/nvim-hs-contrib'
+Plugin 'neovimhaskell/neovim-ghcmod'
+
+" Javascript
 Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'geekjuice/vim-mocha'
-Plugin 'bitc/vim-hdevtools'
-"Plugin 'eagletmt/ghcmod-vim'
-"Plugin 'eagletmt/neco-ghc'
-Plugin 'raichoo/haskell-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+
+" Ruby
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'thoughtbot/vim-rspec'
+
+" Ag
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 call yankstack#setup()
@@ -224,7 +238,7 @@ let g:airline_powerline_fonts = 1
 " GitGutter
 """"""""""""""""""""""""""""""""""""""""
 let g:gitgutter_sign_column_always = 0
-
+let g:gitgutter_realtime = 1
 
 " LimeLight
 """"""""""""""""""""""""""""""""""""""""
