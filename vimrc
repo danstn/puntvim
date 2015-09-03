@@ -35,11 +35,12 @@ Plugin 'airblade/vim-gitgutter'
 " Haskell
 "Plugin 'eagletmt/neco-ghc'
 Plugin 'bitc/vim-hdevtools'
+Plugin 'Shougo/vimproc.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'neovimhaskell/nvim-hs'
 Plugin 'neovimhaskell/nvim-hs-contrib'
-Plugin 'neovimhaskell/neovim-ghcmod'
+"Plugin 'neovimhaskell/neovim-ghcmod'
 
 " Javascript
 Plugin 'othree/yajs.vim'
@@ -60,6 +61,7 @@ call yankstack#setup()
 
 filetype plugin indent on   " load filetype-specific indent files
 
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            STANDARD VIM SETTIGNS                             "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,8 +176,8 @@ hi CursorLine ctermbg=233
 "                              PLUGIN SETTINGS                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
-
+" Hdevtools
+au FileType haskell nnoremap <buffer> <F6> :HdevtoolsType<CR>
 
 " Tag Bar
 """"""""""""""""""""""""""""""""""""""""
@@ -239,6 +241,7 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""
 let g:gitgutter_sign_column_always = 0
 let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 
 " LimeLight
 """"""""""""""""""""""""""""""""""""""""
@@ -271,7 +274,7 @@ nmap <leader>i <Plug>yankstack_substitute_newer_paste
 
 " Syntastic
 """"""""""""""""""""""""""""""""""""""""
-nmap <F1> :SyntasticToggleMode<CR>
+nnoremap <F1> :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -280,9 +283,10 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-"let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_loc_list_height = 5
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_filetypes': ['haskell'] }
 
 hi SyntasticErrorSign ctermbg=none ctermfg=red
 hi SyntasticWarningSign ctermbg=none ctermfg=yellow
