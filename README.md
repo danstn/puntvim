@@ -17,7 +17,7 @@ To support `neocomplete` and system's clipboard integration - make sure that vim
 ## Configuration and Plugins
 
 _Note:_ YCM plugin requires Python2, cmake and make. Make sure these are installed otherwise it will fail. Installation
-script is in `~/.vim/bundle/YouCompleteMe`.(`install.py`)
+script is in `~/.vim/bundle/YouCompleteMe` (run `python2 install.py` in this directory to install YCM).
 
 ### Automatic
 
