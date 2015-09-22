@@ -1,4 +1,4 @@
-Punt Vim 
+Punt Vim
 ========
 
 Vim configuration, packages and color schemes.
@@ -16,15 +16,18 @@ To support `neocomplete` and system's clipboard integration - make sure that vim
 
 ## Configuration and Plugins
 
+_Note:_ YCM plugin requires Python2, cmake and make. Make sure these are installed otherwise it will fail. Installation
+script is in `~/.vim/bundle/YouCompleteMe`.(`install.py`)
+
 ### Automatic
 
-Run this script to pull this repo and install vim plugins automatically. 
+Run this script to pull this repo and install vim plugins automatically.
 
 Note: this will replace and backup your `.vimrc` and will attempt to destroy `.vim` directory. Eventially the repository
 will be pulled into `.vim`.
-  
+
     curl https://raw.githubusercontent.com/dzotokan/puntvim/master/setup.sh | sh
-    
+
 ### Manual
 
 - Install Vundle: `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
@@ -67,4 +70,4 @@ Vim quits, so you don't have to stop the container. See `Dockerfile` for details
 ## Issues
 
 - Having YCM plugin enabled causes a `sigterm` in `.rb` files after entering `::` or `..` while in Insert mode using Vim
-  v7.4. Does not happen in MacVim (`mvim -v`) 
+  v7.4. Does not happen in MacVim (`mvim -v`)
