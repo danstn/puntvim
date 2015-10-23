@@ -40,6 +40,7 @@ Plugin 'eagletmt/ghcmod-vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'neovimhaskell/nvim-hs'
 Plugin 'neovimhaskell/nvim-hs-contrib'
+Plugin 'enomsg/vim-haskellConcealPlus'
 "Plugin 'neovimhaskell/neovim-ghcmod'
 
 " Javascript
@@ -291,4 +292,8 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_f
 
 hi SyntasticErrorSign ctermbg=none ctermfg=red
 hi SyntasticWarningSign ctermbg=none ctermfg=yellow
+
+" Haskell Conceal
+""""""""""""""""""""""""""""""""""""""""
+"let g:no_haskell_conceal = 1
 
