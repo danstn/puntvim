@@ -76,7 +76,7 @@ set cursorline   " highlight current line
 set expandtab
 set hlsearch     " highlight search results
 set ignorecase   " case insensitive search
-set incsearch
+set incsearch    " match the search and return to the initial position
 set list         " Show `listchars` characters
 set nofoldenable
 set number       " show line numbers
