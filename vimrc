@@ -27,6 +27,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'justinmk/vim-syntax-extra'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -173,6 +174,8 @@ hi NonText ctermfg=233
 hi LineNr ctermfg=235 ctermbg=black
 hi Comment ctermbg=none ctermfg=242
 hi CursorLine ctermbg=233
+hi clear Visual
+hi Visual ctermbg=237
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              PLUGIN SETTINGS                                 "
@@ -196,9 +199,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Ctrl-P
 """"""""""""""""""""""""""""""""""""""""
-let g:ctrlp_map           = '<c-p>'
-let g:ctrlp_cmd           = 'CtrlP'
-let g:ctrlp_match_window  = 'bottom,order:ttb,min:3,max:10,results:50'
+let g:ctrlp_map          = '<c-p>'
+let g:ctrlp_cmd          = 'CtrlP'
+let g:ctrlp_dont_split   = 'nerdtree'
+let g:ctrlp_match_window = 'bottom,order:ttb,min:3,max:10,results:50'
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:ctrlp_custom_ignore .= '\v[\/](node_modules)$'
 "let g:ctrlp_custom_ignore .= '\v\.(class|cache|stats)$'
@@ -244,6 +248,11 @@ let g:airline_powerline_fonts = 1
 let g:gitgutter_sign_column_always = 0
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
+
+" JSX
+""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0
+
 
 " LimeLight
 """"""""""""""""""""""""""""""""""""""""
