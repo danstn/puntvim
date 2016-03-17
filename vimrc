@@ -304,5 +304,6 @@ hi SyntasticWarningSign ctermbg=none ctermfg=yellow
 
 " Haskell Conceal
 """"""""""""""""""""""""""""""""""""""""
-"let g:no_haskell_conceal = 1
+let g:no_haskell_conceal = 1
+let hscoptions="EM"
 
