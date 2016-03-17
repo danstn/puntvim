@@ -35,7 +35,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
 " Haskell
-"Plugin 'eagletmt/neco-ghc'
 Plugin 'bitc/vim-hdevtools'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'eagletmt/ghcmod-vim'
