@@ -63,7 +63,7 @@ call yankstack#setup()
 
 filetype plugin indent on   " load filetype-specific indent files
 
-autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+"autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            STANDARD VIM SETTIGNS                             "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
