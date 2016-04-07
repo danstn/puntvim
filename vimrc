@@ -112,11 +112,11 @@ set ttyscroll=3
 set lazyredraw
 
 " Make vim remember undos, even when the file is closed!
-set undofile                    " Save undo's after file closes
+set undofile                    " save undo's after file closes
 set undodir=~/.vim/undo         " where to save undo histories
-set undolevels=1000             " How many undos
+set undolevels=1000             " how many undos
 set undoreload=10000            " number of lines to save for undo
-set tags=tags;/
+set tags=tags;/                 " directory tag search (not just local)
 
 " Jump to the previous location when opening a file
 if has("autocmd")
@@ -305,5 +305,5 @@ hi SyntasticWarningSign ctermbg=none ctermfg=yellow
 " Haskell Conceal
 """"""""""""""""""""""""""""""""""""""""
 let g:no_haskell_conceal = 1
-let hscoptions="EM"
+let hscoptions="𝐒Z𝐄"
 
