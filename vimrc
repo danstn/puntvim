@@ -55,6 +55,9 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
 
+" Swift
+Plugin 'keith/swift.vim'
+
 " Ag
 Plugin 'rking/ag.vim'
 
@@ -240,7 +243,7 @@ let g:airline_theme = 'wombat' " dark
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 
 " GitGutter
@@ -297,7 +300,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_loc_list_height = 5
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_filetypes': ['haskell'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_filetypes': ['haskell', 'scala'] }
 
 hi SyntasticErrorSign ctermbg=none ctermfg=red
 hi SyntasticWarningSign ctermbg=none ctermfg=yellow
