@@ -29,6 +29,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'whatyouhide/vim-gotham'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -50,6 +51,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'geekjuice/vim-mocha'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'isRuslan/vim-es6'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
